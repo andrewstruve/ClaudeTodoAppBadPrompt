@@ -1,0 +1,156 @@
+.app {
+  width: 100%;
+  max-width: 550px;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 100;
+  color: #b83f45;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,.03);
+}
+
+.todo-input:focus {
+  border-color: #aaa;
+}
+
+.add-btn {
+  padding: 14px 20px;
+  font-size: 16px;
+  background: #b83f45;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #a53539;
+}
+
+.todo-container {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1), 0 25px 50px rgba(0,0,0,.1);
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #ededed;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #5dc2af;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: color 0.2s;
+}
+
+.todo-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  color: #af5b5e;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #777;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #777;
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  border-color: #ddd;
+}
+
+.filter-btn.active {
+  border-color: #b83f45;
+  color: #b83f45;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.clear-btn:hover:not(:disabled) {
+  color: #af5b5e;
+  text-decoration: underline;
+}
+
+.clear-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
